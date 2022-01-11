@@ -4,7 +4,7 @@ require('dotenv').config()
 
 const app = express()
 
-const whiteList = ['http://127.0.0.1:5500']
+const whiteList = ['https://proztock.github.io/MyWebPortafolio']
 
 app.use(cors({origin: whiteList}))
 
@@ -15,6 +15,5 @@ app.use(require('./routes.js'))
 PORT = process.env.PORT
 
 app.listen(PORT, () => {
-
     console.log('Server running on port: ' + PORT)
 })
