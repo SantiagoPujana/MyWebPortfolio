@@ -14,8 +14,6 @@ app.use(cors({origin: whiteList}))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-PORT = process.env.PORT
-
 router.post('/send_email', (req, res) => {
 
     const {name, email, phone, message} = req.body
