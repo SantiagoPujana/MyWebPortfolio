@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
+    "dev": "nodemon src/email_api.js"
   },
   "author": "Santiago Pujana Polanco",
   "license": "MIT",
@@ -15,7 +17,9 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "nodemailer": "^6.7.1"
+    "netlify-lambda": "^2.0.15",
+    "nodemailer": "^6.7.1",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
