@@ -7,7 +7,7 @@ require('dotenv').config()
 
 const app = express()
 
-const whiteList = ['https://proztock.github.io', 'https://proztock.github.io/MyWebPortafolio']
+const whiteList = ['https://santiagopujana.github.io', 'https://santiagopujana.github.io/MyWebPortafolio']
 
 app.use(cors({origin: whiteList}))
 
