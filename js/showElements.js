@@ -72,19 +72,19 @@ const projects_data = [{
     name: "Location Tracker<br>Project",
     technologies: "Java - MongoDB - Android",
     description: "This project has two android apps, Location Service gets last known location by a background service and uploads it to a MongoDB collection, and finally Location Tracker queries that location and sets a marker on a map.",
-    url: "https://github.com/ProzTock/LocationTrackerProject"
+    url: "https://github.com/SantiagoPujana/LocationTrackerProject"
 },
 {
     name: "Allianz Receipts",
     technologies: "Python 3 - Selenium",
     description: "This project in Python 3 with Selenium, automates the download of Allianz receipts on the Allia 2Net platform, according to a data set previously given in Excel format.",
-    url: "https://github.com/ProzTock/RecibosAllianz"
+    url: "https://github.com/SantiagoPujana/RecibosAllianz"
 },
 {
     name: "MyWebPortafolio",
     technologies: "HTML - CSS - JavaScript - Node.js",
     description: "This project written in HTML, CSS and JS is a simple design of my web portfolio to introduce myself and get a job.",
-    url: "https://github.com/ProzTock/MyWebPortafolio"
+    url: "https://github.com/SantiagoPujana/MyWebPortafolio"
 }]
 
 const $project_list_div = document.getElementById("project-list")
