@@ -1,12 +1,12 @@
-const $form = document.getElementById("form")
+const $form = document.getElementById("form");
 
-$form.addEventListener("submit", sendEmail)
+$form.addEventListener("submit", sendEmail);
 
 async function sendEmail(event){
 
-    event.preventDefault()
+    event.preventDefault();
 
-    const form = new FormData(this)
+    const form = new FormData(this);
 
     const response = await fetch(this.action, {
 
@@ -21,17 +21,17 @@ async function sendEmail(event){
         headers:{
             'Content-Type': 'application/json'
         }
-    })
+    });
 
     if(response.ok){
 
-        this.reset()
+        this.reset();
 
         Swal.fire({
             icon: 'success',
             title: '¡Email sended!',
             text: 'Thank you for contacting me, I will respond you soon...'
-        })
+        });
     }
     else{
 
@@ -39,6 +39,6 @@ async function sendEmail(event){
             icon: 'error',
             title: 'There was an error :(',
             text: 'Please check your data entered or your internet connection...'
-        })
+        });
     }
 }

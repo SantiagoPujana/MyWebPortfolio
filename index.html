@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/btns.css">
     <link rel="stylesheet" href="css/waves.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="icon" href="img/icons/computer_sciencie.ico">
@@ -95,10 +96,22 @@
         data-aos="fade-right"
         data-aos-duration="500">
         <h1>My Personal <span>Projects</span></h1>
-        <div class="project-list"
-          id="project-list"
+        <div class="container"
           data-aos="zoom-in-left"
-          data-aos-duration="500"></div>
+          data-aos-duration="500">
+          <div class="container-list">
+            <div class="carousel_container">
+              <button aria-label="Previous" class="previous">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div id="project-list" class="project-list"></div>
+              <button aria-label="Next" class="next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <div role="tablist" class="indicators"></div>
+          </div>
+        </div>
 			</div>
 			<div class="contact dark-color"
         id="contact"
@@ -165,6 +178,9 @@
     <script type="text/javascript" src="js/showElements.js"></script>
     <script type="text/javascript" src="js/navbarBtnsEvents.js"></script>
     <script type="text/javascript" src="js/sendEmail.js"></script>
+    <script type="text/javascript" src="js/projectSlide.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.15/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">AOS.init()</script>

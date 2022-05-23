@@ -12,6 +12,11 @@ const img_data = [{
     img_path: "img/icons/java.png"
 },
 {
+    id: "c++",
+    caption: "C++",
+    img_path: "img/icons/C++.png"
+},
+{
     id: "sql",
     caption: "SQL",
     img_path: "img/icons/sql.png"
@@ -42,8 +47,13 @@ const img_data = [{
     img_path: "img/icons/git.png"
 },
 {
+    id: "android",
+    caption: "Android Studio",
+    img_path: "img/icons/android.png"
+},
+{
     id: "linux",
-    caption: "Linux",
+    caption: "GNU/Linux",
     img_path: "img/icons/linux.png"
 },
 {
@@ -56,27 +66,27 @@ const $tech_div = document.getElementById("tech-icons");
 
 img_data.forEach(path => {
 
-    const $div = document.createElement("div")
-    $div.classList.add("tech-div")
-    const $img = document.createElement("img")
-    $img.src = path["img_path"]
-    $img.alt = path["id"]
-    const $h3 = document.createElement("h3")
-    $h3.innerHTML = path["caption"]
+    const $div = document.createElement("div");
+    $div.classList.add("tech-div");
+    const $img = document.createElement("img");
+    $img.src = path["img_path"];
+    $img.alt = path["id"];
+    const $h3 = document.createElement("h3");
+    $h3.innerHTML = path["caption"];
 
-    $div.appendChild($img)
-    $div.appendChild($h3)
+    $div.appendChild($img);
+    $div.appendChild($h3);
 
-    $fragment.appendChild($div)
+    $fragment.appendChild($div);
 });
 
 $tech_div.appendChild($fragment);
 
 const projects_data = [{
 
-    name: "Location Tracker<br>Project",
+    name: "Location Tracker",
     technologies: "Java - MongoDB - Android",
-    description: "This project has two android apps, Location Service gets last known location by a background service and uploads it to a MongoDB collection, and finally Location Tracker queries that location and sets a marker on a map.",
+    description: "Location Service gets last known location by a background service and uploads it to a MongoDB collection, and finally Location Tracker queries that location and sets a marker on a map.",
     url: "https://github.com/SantiagoPujana/LocationTrackerProject"
 },
 {
@@ -86,36 +96,42 @@ const projects_data = [{
     url: "https://github.com/SantiagoPujana/RecibosAllianz"
 },
 {
-    name: "MyWebPortafolio",
+    name: "My Web Portafolio",
     technologies: "HTML - CSS - JavaScript - Node.js",
     description: "This project written in HTML, CSS and JS is a simple design of my web portfolio to introduce myself and get a job.",
     url: "https://github.com/SantiagoPujana/MyWebPortafolio"
+},
+{
+    name: "Malware Scripts",
+    technologies: "C++ - BATCH Scripting",
+    description: "Malware scripts for Windows written in C++ and BATCH Scripting.",
+    url: "https://github.com/SantiagoPujana/MalwareScripts"
 }];
 
 const $project_list_div = document.getElementById("project-list");
 
 projects_data.forEach(project => {
 
-    const $div = document.createElement("div")
-    $div.classList.add("project-info")
-    const $h3 = document.createElement("h3")
-    $h3.innerHTML = project["name"]
-    const $h4 = document.createElement("h4")
-    $h4.textContent = project["technologies"]
-    const $p = document.createElement("p")
-    $p.textContent = project["description"]
-    const $a = document.createElement("a")
-    $a.classList.add("light-btn")
-    $a.href = project["url"]
-    $a.target = "_blank"
-    $a.textContent = "Repository"
+    const $div = document.createElement("div");
+    $div.classList.add("project-info");
+    const $h3 = document.createElement("h3");
+    $h3.innerHTML = project["name"];
+    const $h4 = document.createElement("h4");
+    $h4.textContent = project["technologies"];
+    const $p = document.createElement("p");
+    $p.textContent = project["description"];
+    const $a = document.createElement("a");
+    $a.classList.add("light-btn");
+    $a.href = project["url"];
+    $a.target = "_blank";
+    $a.textContent = "Repository";
 
-    $div.appendChild($h3)
-    $div.appendChild($h4)
-    $div.appendChild($p)
-    $div.appendChild($a)
+    $div.appendChild($h3);
+    $div.appendChild($h4);
+    $div.appendChild($p);
+    $div.appendChild($a);
 
-    $fragment.appendChild($div)
+    $fragment.appendChild($div);
 });
 
 $project_list_div.appendChild($fragment);
