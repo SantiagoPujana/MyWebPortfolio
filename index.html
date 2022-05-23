@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/btns.css">
     <link rel="stylesheet" href="css/waves.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="icon" href="img/icons/computer_sciencie.ico">
   </head>
@@ -22,7 +22,7 @@
         <ul class="menu" id="menu">
           <li class="options"><a class="btn-style" id="home-btn">Home</a></li>
           <li class="options"><a class="btn-style" id="aboutme-btn">About me</a></li>
-          <li class="options"><a class="btn-style" id="tech-btn">Technologies and Skills</a></li>
+          <li class="options"><a class="btn-style" id="tech-btn">Technologies</a></li>
           <li class="options"><a class="btn-style" id="projects-btn">Projects</a></li>
           <li class="options"><a class="btn-style" id="contact-btn">Contact</a></li>
         </ul>
@@ -35,10 +35,17 @@
           <h1><span>Santiago</span> Pujana</h1>
           <h2>and I'm a <span>Computer Science</span> Student</h2>
           <div class="cv">
-            <a class="light-btn" href="docs/SantiagoPujana-CV.pdf" target="_blank">Watch CV</a>
+            <div class="watch-cv">
+              <a class="light-btn" id="cv-btn">Watch CV</a>
+              <div class="languaje">
+                <a id="select-lang">Select language:</a>
+                <a href="https://www.canva.com/design/DAExZgLKWaw/8qXIAnNhHuLLXIq3WEQxGA/view?utm_content=DAExZgLKWaw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><img class="flags" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png" alt="Spain Flag"></img><br>Spanish</a>
+                <a id="english" href="https://www.canva.com/design/DAEhHvhmhKg/wgrYJKteGhwdgIH6FnDu4g/view?utm_content=DAEhHvhmhKg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><img class="flags" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png" alt="USA Flag"></img><br>English</a>
+              </div>
+            </div>
           </div>
         </div>
-        <img src="img/myPhoto.jpg" alt="Santiago Pujana Polanco" data-aos="zoom-in-up" data-aos-duration="1000">
+        <img id="my-photo" src="img/myPhoto.jpg" alt="Santiago Pujana Polanco" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="home-wave">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="home-shape-fill"></path>
@@ -49,12 +56,12 @@
         data-aos="fade-right"
         data-aos-duration="500">
         <div class="coder">
-          <h1>About <span>Me</span></h1>
+          <h1>A little About <span>Me</span></h1>
           <img src="img/programmer.png" alt="Programmer">
         </div>
         <div class="about-me">
           <p class="text">
-            I'm from Neiva, Huila, Colombia, I'm 23 years old, I have studied Systems and Computer Engineering (Computer Science) since 2017 in Universidad Católica de Colombia, so I'm currently coursing tenth semester. Since some years I usually coding in Python, Java, HTML, CSS, JavaScript, one of my goals is to learn more technologies like Django, Flask Framework, Golang and how to implement secure code, and then apply them with new projects. I'm a person who loves what to do, I like to learn new things everyday, share my knowlegde with others and improve my skills to build new tools than allow solving a need.
+            I'm from Neiva, Huila, Colombia, I'm 23 years old, I have studied Systems and Computer Engineering (Computer Science) since 2017 in Universidad Católica de Colombia, so I'm currently coursing tenth semester. Since some years I usually coding in Python, Java, HTML, CSS, JavaScript, one of my goals is to learn more technologies like Django, Flask Framework, Golang and how to implement secure code, and then apply them with new projects. I'm a person who loves what to do, I like to learn new things everyday, share my knowlegde with others and improve my skills to build new tools which allow solving a need.
           </p>
           <div class="hobbies">
             <h3>My <span>Hobbies</span></h3>
@@ -75,7 +82,7 @@
               <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
           </svg>
         </div>
-        <h1>Technologies and <span>Skills</span></h1>
+        <h1>Knowledge and <span>Skills</span></h1>
         <div class="tech-icons" id="tech-icons" data-aos="zoom-in-right" data-aos-duration="500"></div>
         <div class="bottom-wave">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -87,8 +94,8 @@
         id="projects"
         data-aos="fade-right"
         data-aos-duration="500">
-        <h1>My <span>Projects</span></h1>
-        <div class="projects-list"
+        <h1>My Personal <span>Projects</span></h1>
+        <div class="project-list"
           id="project-list"
           data-aos="zoom-in-left"
           data-aos-duration="500"></div>
@@ -103,7 +110,7 @@
               <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
           </svg>
         </div>
-        <h1>Contact</h1>
+        <h1>Let's Keep in <span>Touch</span></h1>
         <div class="contact-box" data-aos="zoom-in-right" data-aos-duration="500">
           <div class="left-side">
             <img src="img/email.png" alt="email">
@@ -158,8 +165,8 @@
     <script type="text/javascript" src="js/showElements.js"></script>
     <script type="text/javascript" src="js/navbarBtnsEvents.js"></script>
     <script type="text/javascript" src="js/sendEmail.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.15/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">AOS.init()</script>
   </body>
 </html>

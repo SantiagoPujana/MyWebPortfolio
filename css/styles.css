@@ -48,7 +48,7 @@ header{
   line-height: 50px;
   list-style: none;
   font-weight: bold;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo{
@@ -173,22 +173,88 @@ header{
 
   flex-direction: column;
   text-align: center;
+  z-index: 1;
 }
 
 .cv{
 
+  display: flex;
   margin-top: clamp(25px, 5vw, 50px);
   margin-bottom: 0px;
+  justify-content: center;
 }
 
-.cv a{
+#cv-btn{
 
 	font-size: clamp(12px, 5vw, 17px);
   font-weight: bold;
   padding: 5px 15px;
+  cursor: pointer;
 }
 
-.home img{
+.watch-cv{
+
+  width: 121px;
+}
+
+.languaje{
+
+  display: none;
+  list-style: none;
+  position: absolute;
+  width: 176px;
+  margin-top: 5px;
+  left: calc(50% - 85px);
+}
+
+.watch-cv:hover > .languaje{
+
+  display: block;
+}
+
+#select-lang{
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  cursor: default;
+  background-color: white;
+  color: #010038;
+  padding: 10px 20px;
+  font-size: clamp(11px, 5vw, 16px);
+}
+
+#english{
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.languaje a{
+
+  text-align: center;
+  background-color: white;
+  color: #010038;
+  text-decoration: none;
+  display: block;
+  padding: 10px 50px;
+  font-size: clamp(10px, 5vw, 15px);
+}
+
+.languaje a:hover{
+
+  background-color: #F39422;
+  color: #010038;
+  cursor: pointer;
+}
+
+.flags{
+
+  width: 40px;
+  height: 25px;
+}
+
+#my-photo{
 
   width: clamp(250px, 40%, 300px);
   border-radius: 25% 10%;
@@ -319,16 +385,14 @@ header{
 	font-size: clamp(40px, 8vw, 60px);
 }
 
-.tech h1 span, .projects h1 span{
+.tech h1 span, .projects h1 span, .contact h1 span{
 
   color: #F39422;
 }
 
 .tech-icons{
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
   align-items: center;
   gap: 3.125rem;
@@ -364,15 +428,13 @@ header{
 
 /*====================== PROJECTS INFO ======================*/
 
-.projects-list{
+.project-list{
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-left: 15px;
-  margin-bottom: 15px;
   margin-bottom: 20px;
   gap: 20px
 }
@@ -645,7 +707,12 @@ footer a{
   }
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 808px){
+
+  .tech-icons{
+
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   .tech-icons img{
 
@@ -660,17 +727,28 @@ footer a{
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 808px){
 
-	.home{
+  .tech-icons{
 
-		height: auto;
-	}
-
-  .tech{
-
-    padding-bottom: 70px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 15px;
   }
+
+  .tech-icons img{
+
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .tech-icons img:hover{
+
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media screen and (max-width: 561px){
 
   .tech-icons img{
 
@@ -682,6 +760,19 @@ footer a{
 
     width: 7.25rem;
     height: 7.25rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+	.home{
+
+		height: auto;
+	}
+
+  .tech{
+
+    padding-bottom: 70px;
   }
 }
 

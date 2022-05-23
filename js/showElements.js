@@ -1,4 +1,4 @@
-const $fragment = document.createDocumentFragment()
+const $fragment = document.createDocumentFragment();
 
 const img_data = [{
 
@@ -10,6 +10,11 @@ const img_data = [{
     id: "java",
     caption: "Java",
     img_path: "img/icons/java.png"
+},
+{
+    id: "sql",
+    caption: "SQL",
+    img_path: "img/icons/sql.png"
 },
 {
     id: "mongo_db",
@@ -43,11 +48,11 @@ const img_data = [{
 },
 {
     id: "terminal",
-    caption: "Terminal",
+    caption: "Bash Scripting",
     img_path: "img/icons/terminal.png"
-}]
+}];
 
-const $tech_div = document.getElementById("tech-icons")
+const $tech_div = document.getElementById("tech-icons");
 
 img_data.forEach(path => {
 
@@ -63,9 +68,9 @@ img_data.forEach(path => {
     $div.appendChild($h3)
 
     $fragment.appendChild($div)
-})
+});
 
-$tech_div.appendChild($fragment)
+$tech_div.appendChild($fragment);
 
 const projects_data = [{
 
@@ -85,9 +90,9 @@ const projects_data = [{
     technologies: "HTML - CSS - JavaScript - Node.js",
     description: "This project written in HTML, CSS and JS is a simple design of my web portfolio to introduce myself and get a job.",
     url: "https://github.com/SantiagoPujana/MyWebPortafolio"
-}]
+}];
 
-const $project_list_div = document.getElementById("project-list")
+const $project_list_div = document.getElementById("project-list");
 
 projects_data.forEach(project => {
 
@@ -111,6 +116,6 @@ projects_data.forEach(project => {
     $div.appendChild($a)
 
     $fragment.appendChild($div)
-})
+});
 
-$project_list_div.appendChild($fragment)
+$project_list_div.appendChild($fragment);
