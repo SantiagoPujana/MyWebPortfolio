@@ -886,10 +886,12 @@ footer a{
 
 .dark-color{
 
-  background-color: #010038;
+  background: rgb(1,0,56);
+  background: linear-gradient(0deg, rgba(1,0,56,1) 0%, rgba(103,93,79,1) 50%, rgba(1,0,56,1) 100%);
 }
 
 .light-color{
 
-  background-color: #fff;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,206,255,1) 50%, rgba(255,255,255,1) 100%);
 }
