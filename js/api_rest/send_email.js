@@ -38,7 +38,7 @@ async function sendEmail(event){
         Swal.fire({
             icon: 'error',
             title: 'There was an error :(',
-            text: 'Please check your data entered or your internet connection...'
+            text: 'Please reload the page and then check your data entered or your internet connection...'
         });
     }
 }
