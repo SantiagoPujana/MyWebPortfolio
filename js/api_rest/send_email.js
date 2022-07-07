@@ -8,7 +8,7 @@ async function sendEmail(event){
 
     const form = new FormData(this);
 
-    const response = await fetch(this.action, {
+    const response = await fetch(this.action + '/email/send_email', {
 
         method: this.method,
         body: JSON.stringify({
@@ -33,12 +33,22 @@ async function sendEmail(event){
             text: 'Thank you for contacting me, I will respond you soon...'
         });
     }
+    else if(response.status == 403){
+
+        this.reset();
+
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Hey! Are you there?',
+            text: 'It seems you have been inactive for a long time, please reload the page and try again...'
+        });
+    }
     else{
 
         Swal.fire({
             icon: 'error',
             title: 'There was an error :(',
-            text: 'Please reload the page and then check your data entered or your internet connection...'
+            text: 'Please check your data entered or your internet connection...'
         });
     }
 }
