@@ -1,5 +1,5 @@
 {
-  "name": "mywebportafolio",
+  "name": "my_web_portafolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "./node_modules/.bin/netlify-lambda serve src",
     "build": "./node_modules/.bin/netlify-lambda build src",
-    "dev": "nodemon src/email_api.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "Santiago Pujana Polanco",
   "license": "MIT",
