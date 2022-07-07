@@ -8,6 +8,8 @@ async function sendEmail(event){
 
     const form = new FormData(this);
 
+    showLoader();
+
     const response = await fetch(this.action + '/email/send_email', {
 
         method: this.method,
@@ -22,6 +24,8 @@ async function sendEmail(event){
             'Content-Type': 'application/json'
         }
     });
+
+    hideLoader();
 
     if(response.ok){
 

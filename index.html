@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/btns.css">
     <link rel="stylesheet" href="css/waves.css">
+    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="icon" href="img/icons/computer_sciencie.ico">
   </head>
   <body>
+    <div class="lds-dual-ring loader" id="loader"></div>
     <header data-aos="fade-down" data-aos-duration="1000">
       <nav>
         <input type="checkbox" id="side-menu-btn">
@@ -132,7 +134,7 @@
             <form id="form" action="https://festive-franklin-576549.netlify.app/.netlify/functions/index/api" method="POST">
               <div class="info-required">
                 <label for="name">Name *</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" autocomplete="off" required pattern="[a-zA-Z\ ]+">
+                <input type="text" name="name" id="name" placeholder="Enter your name" autocomplete="off" required pattern="[a-zA-Z/\x20+/g]+">
               </div>
               <div class="info-required">
                 <label for="email">Email *</label>
@@ -177,6 +179,7 @@
     </footer>
     <script type="text/javascript" src="js/show_elements.js"></script>
     <script type="text/javascript" src="js/navbar_btns_events.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
     <script type="text/javascript" src="js/api_rest/app_init.js"></script>
     <script type="text/javascript" src="js/api_rest/send_email.js"></script>
     <script type="text/javascript" src="js/project_slide.js"></script>
