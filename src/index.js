@@ -4,7 +4,7 @@ const serverless = require('serverless-http');
 
 const app = express();
 
-const whiteList = ['https://santiagopujana.github.io', 'https://santiagopujana.github.io/MyWebPortafolio'];
+const whiteList = ['https://santiagopujana.github.io', 'https://santiagopujana.github.io/MyWebPortfolio'];
 
 app.use(cors({ origin: whiteList }));
 
