@@ -10,6 +10,8 @@ async function sendEmail(event){
 
     showLoader();
 
+    const token = JSON.parse(localStorage.getItem('user')).token;
+
     const response = await fetch(this.action + '/email/send_email', {
 
         method: this.method,
@@ -21,6 +23,7 @@ async function sendEmail(event){
             message: form.get('message')
         }),
         headers:{
+            Authorization: 'Bearer ' + token,
             'Content-Type': 'application/json'
         }
     });
@@ -37,7 +40,7 @@ async function sendEmail(event){
             text: 'Thank you for contacting me, I will respond you soon...'
         });
     }
-    else if(response.status == 403){
+    else if(response.status === 403){
 
         this.reset();
 
@@ -45,14 +48,14 @@ async function sendEmail(event){
             icon: 'warning',
             title: '¡Hey! Are you there?',
             text: 'It seems you have been inactive for a long time, please reload the page and try again...'
-        });
+        }).then(() => window.location.reload());
     }
     else{
 
         Swal.fire({
             icon: 'error',
             title: 'There was an error :(',
-            text: 'Please check your data entered or your internet connection...'
+            text: 'Please check your data entered or your internet connection and try again...'
         });
     }
 }

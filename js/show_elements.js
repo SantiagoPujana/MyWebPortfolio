@@ -96,10 +96,10 @@ const projects_data = [{
     url: "https://github.com/SantiagoPujana/RecibosAllianz"
 },
 {
-    name: "My Web Portafolio",
+    name: "My Web Portfolio",
     technologies: "HTML - CSS - JavaScript - Node.js",
     description: "This project written in HTML, CSS and JS is a simple design of my web portfolio to introduce myself and get a job.",
-    url: "https://github.com/SantiagoPujana/MyWebPortafolio"
+    url: "https://github.com/SantiagoPujana/MyWebPortfolio"
 },
 {
     name: "Malware Scripts",

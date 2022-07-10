@@ -1,10 +1,10 @@
 window.addEventListener('load', function(){
 
+    webPortfolioInit();
     hideLoader();
 });
 
 function hideLoader(){
-
     document.getElementById('loader').classList.toggle('hideloader');
 }
 
