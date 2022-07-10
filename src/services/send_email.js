@@ -29,12 +29,14 @@ async function prepareEmail(data){
             `;
         }
 
-        return sendEmail(HTMLContent)
-            .then(() => { return {ok: true, status: 200}; })
+        let email_status = await sendEmail(HTMLContent)
+            .then(() => { return { ok: true, status: 200 }; })
             .catch((err) => console.log(err.message));
+
+        return email_status;
     }
     else{
-        return {ok: false, status: 400};
+        return { ok: false, status: 400 };
     }
 }
 

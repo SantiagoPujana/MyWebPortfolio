@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const sendEmail = require('../model/send_email');
+const sendEmail = require('../services/send_email');
+const jwt = require('../security/auth');
 
-router.post('/send_email', (req, res) => {
+router.post('/send_email', jwt.verifyToken, async (req, res) => {
 
-    sendEmail.prepareEmail(req.body).then(result => {
-        res.json(result);
-        res.status(result.status);
+    await sendEmail.prepareEmail(req.body).then(result => {
+        res.status(result.status).json(result);
     });
 });
 
