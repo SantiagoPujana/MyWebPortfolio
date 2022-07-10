@@ -1,5 +1,5 @@
 {
-  "name": "my_web_portafolio",
+  "name": "my_web_portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": ".\\node_modules\\.bin\\netlify-lambda serve src",
-    "build": ".\\node_modules\\.bin\\netlify-lambda build src",
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
     "dev": "nodemon src/index.js"
   },
   "author": "Santiago Pujana Polanco",
