@@ -1,6 +1,6 @@
 async function webPortfolioInit(){
 
-    await fetch(this.action + '/init_web_portfolio/init', {
+    await fetch('https://festive-franklin-576549.netlify.app/.netlify/functions/index/api/init_web_portfolio/init', {
 
         method: 'POST',
         body: JSON.stringify({
