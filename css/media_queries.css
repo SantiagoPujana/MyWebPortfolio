@@ -1,0 +1,188 @@
+/*====================== MEDIA QUERIES ======================*/
+
+@media screen and (max-width: 1009px){
+
+	.about{
+
+		flex-wrap: wrap;
+  }
+
+  .home, .about{
+
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1146px){
+
+  .home{
+
+    height: 105vh;
+  }
+
+  .about{
+
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1695px){
+
+  .text{
+
+    inline-size: 900px;
+  }
+}
+
+@media screen and (max-width: 1695px){
+
+  .text{
+
+    inline-size: auto;
+  }
+}
+
+@media screen and (max-width: 1040px){
+
+  .text{
+
+    inline-size: auto;
+  }
+
+	.contact-box{
+
+		grid-template-columns: 1fr;
+    width: clamp(200px, 80vw, 500px);
+	}
+
+  .left-side{
+
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  .left-side img{
+
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 808px){
+
+  .tech-icons{
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tech-icons img{
+
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .tech-icons img:hover{
+
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media screen and (max-width: 808px){
+
+  .tech-icons{
+
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 15px;
+  }
+
+  .tech-icons img{
+
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .tech-icons img:hover{
+
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media screen and (max-width: 561px){
+
+  .tech-icons img{
+
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  .tech-icons img:hover{
+
+    width: 7.25rem;
+    height: 7.25rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+	.home{
+
+		height: auto;
+	}
+
+  .tech{
+
+    padding-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 830px){
+
+  .menu-btn{
+
+    display: block;
+  }
+
+  .menu{
+
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(179, 108, 23, 0.75);
+    backdrop-filter: blur(15px);
+    top: 51px;
+    left: -100%;
+    text-align: center;
+    box-shadow: inset 0 0 5px 0 #010038;
+    transition: all .5s;
+  }
+
+  .menu li{
+
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .options a{
+
+    color: #fff;
+    border-bottom: solid 5px #010038;
+  }
+
+  .options a:hover, .menu .active{
+
+    color: #fff;
+    border-bottom: solid 5px #F39422;
+  }
+
+  #side-menu-btn:checked ~ .menu-btn{
+
+    color: #fff;
+  }
+
+  #side-menu-btn:checked ~ .menu{
+
+    left: 0;
+  }
+}
